@@ -45,7 +45,7 @@ function Paddle:update(dt)
     -- go any farther than the bottom of the screen minus the paddle's
     -- height (or else it will go partially below, since position is
     -- based on its top left corner)
-    else
+    else if self.dy > 0 then
         self.y = math.min(VIRTUAL_HEIGHT - self.height, self.y + self.dy * dt)
     end
 end
